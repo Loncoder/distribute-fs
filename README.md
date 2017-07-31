@@ -1,0 +1,7 @@
+# distribute-fs
+这个分布式存储是通过mri技术实现的rpc调用
+mainserver主要实现了，对replicatserver的相关操作调用；路由转发；对client的链接进行更新管理；事务缓存-->可以分开每个replication单独实现自己的缓存
+replicateserver主要实现当前节点数据的读写
+secondary对master的数据信息进行备份和集群心跳检测
+
+技术亮点：mri学习，事务缓存，文件锁定，路由转发，心跳检测
